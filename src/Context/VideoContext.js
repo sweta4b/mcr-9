@@ -8,11 +8,28 @@ export default function VideoProvider ({children}) {
 
     const [videoCategory, setVideoCategory] = useState(categories);
     const [selectedVideo, setSelectedVideo] = useState(videos);
+    const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
     const [watchLater, setWatchLater] = useState([]);
-    const [playlist, setPlaylist] = useState([]);
+    const [playlist, setPlaylist] = useState([{
+        title:"",
+        description:"",
+    }]);
 
-    
+    const addTitle = (event) => {
+        setTitle(event.target.value);
+    }
 
+    const addDescription = (event) => {
+        setDescription(event.target.value);
+    }
+
+    const createPlaylist = () => {
+       setPlaylist((playlist) => [...playlist, {
+        title:title,
+        description:description 
+          }])
+    }
 
     const handleWatchLater = (video) => {
         if(watchLater.includes(video)){
@@ -20,15 +37,12 @@ export default function VideoProvider ({children}) {
         }else{
             addToWatchLater(video)
         }
-        // setIsAdded(!isAdded)
     }
 
 
     function removeFromWatchLater(video){
         setWatchLater((watchLater) => watchLater.filter((videos) => videos._id !== video._id))
     }
-
-    
 
     function addToWatchLater(video ){ 
         setWatchLater((watchLater) => [...watchLater, video]); 
@@ -37,6 +51,10 @@ export default function VideoProvider ({children}) {
 
     return (
         <VideoContext.Provider value={{
+            playlist,
+            addTitle,
+            addDescription,
+            createPlaylist,
            videoCategory,
            selectedVideo,
            handleWatchLater,

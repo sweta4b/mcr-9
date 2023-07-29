@@ -11,18 +11,15 @@ function Sidebar() {
         color: isActive ? 'skyblue' : 'black',
         textDecoration: 'none'
       });
+      
     return (
         <div>
         <div className='sidenav'>
             <ul className='navlist' >
-                <li ><NavLink to="/" style={getStyles}>  < HomeIcon/> Home</NavLink></li>
-                
-                <li ><NavLink to="/playlist" style={getStyles}>  < PlaylistAddIcon/> Playlists</NavLink></li>
-                
-                <li ><NavLink to="/explore"style={getStyles}><ExploreIcon/> Explore</NavLink></li>
-                
-                <li ><NavLink to="/watchlater"style={getStyles}>< WatchLaterIcon/> WatchLater</NavLink></li>
-                
+                <li ><NavLink to="/" style={getStyles}>  < HomeIcon/> Home</NavLink></li> 
+                <li ><NavLink to="/playlist" style={getStyles}>  < PlaylistAddIcon/> Playlists</NavLink></li>   
+                <li ><NavLink to="/explore"style={getStyles}><ExploreIcon/> Explore</NavLink></li>  
+                <li ><NavLink to="/watchlater"style={getStyles}>< WatchLaterIcon/> WatchLater</NavLink></li>  
             </ul>
         </div>
         </div>

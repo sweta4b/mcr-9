@@ -1,12 +1,10 @@
 import { Card, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material'
-import { useTheme } from "@emotion/react";
 import React from 'react'
 import { useVideos } from '../Context/VideoContext'
 import { useNavigate } from 'react-router-dom';
 
 function ListedCategories() {
     const{videoCategory} = useVideos()
-    const theme = useTheme();
     const navigate = useNavigate();
     return (
         <Container sx={{ py: 1 }} maxWidth="lg">
@@ -21,15 +19,10 @@ function ListedCategories() {
                   component="img"
                   sx={{
                     alignSelf: "center",
-                    // width: theme.spacing(30),
-                    // height: theme.spacing(30),
-                    objectFit: "contain",
-                    // pt: theme.spacing(),
+                    objectFit: "contain", 
                   }}
                   image={thumbnail}
                   src={src}
-                 
-                  
                 />
                 <CardContent>
                   <Typography
@@ -46,7 +39,6 @@ function ListedCategories() {
                   >
                     {category}
                   </Typography>
-                  
                   </CardContent>
               </Card>
             </Grid>

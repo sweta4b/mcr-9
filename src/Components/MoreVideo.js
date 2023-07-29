@@ -17,7 +17,7 @@ function MoreVideo() {
                     gap:'20px'
                 }} 
                 >
-                    <img src={video.thumbnail} style={{width:'200px',}}></img>
+                    <img src={video.thumbnail} style={{width:'200px',}} alt=""></img>
                     <div style={{textAlign:'left', color:'skyblue'}}>
                     <p><b>{video.title}</b></p>
                     <p><b>{video.creator}</b></p>

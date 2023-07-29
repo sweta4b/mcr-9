@@ -1,5 +1,5 @@
 import { Avatar, Box, Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Header from '../Components/Header'
 import Sidebar from '../Components/Sidebar'
 import { useVideos } from '../Context/VideoContext'
@@ -24,15 +24,10 @@ function WatchLater() {
                    component="img"
                    sx={{
                      alignSelf: "center",
-                     // width: theme.spacing(30),
-                     // height: theme.spacing(30),
                      objectFit: "contain",
-                     // pt: theme.spacing(),
                    }}
                    image={video.thumbnail}
                    src={video.src}
-                  
-                   
                  />
                  <CardContent>
                      <Box sx={{
@@ -46,8 +41,6 @@ function WatchLater() {
                      gutterBottom
                      sx={{
                        overflow: "hidden",
-                     //   textOverflow: "ellipsis",
-                     //   display: "-webkit-box",
                        WebkitLineClamp: "1",
                        WebkitBoxOrient: "vertical",
                        textAlign:'left'
@@ -61,12 +54,9 @@ function WatchLater() {
                      gutterBottom
                      sx={{
                        overflow: "hidden",
-                     //   textOverflow: "ellipsis",
-                     //   display: "-webkit-box",
                        WebkitLineClamp: "1",
                        WebkitBoxOrient: "vertical",
                        textAlign:'left',
-                       
                      }}
                    >
                      <b>{video.category}</b>
@@ -82,8 +72,6 @@ function WatchLater() {
                      gutterBottom
                      sx={{
                        overflow: "hidden",
-                     //   textOverflow: "ellipsis",
-                     //   display: "-webkit-box",
                        WebkitLineClamp: "1",
                        WebkitBoxOrient: "vertical",
                      }}
@@ -95,8 +83,6 @@ function WatchLater() {
                      gutterBottom
                      sx={{
                        overflow: "hidden",
-                     //   textOverflow: "ellipsis",
-                     //   display: "-webkit-box",
                        WebkitLineClamp: "1",
                        WebkitBoxOrient: "vertical",
                      }}
