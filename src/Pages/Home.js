@@ -1,8 +1,15 @@
 import React from 'react'
+import Header from '../Components/Header'
+import ListedCategories from '../Components/ListedCategories'
+import Sidebar from '../Components/Sidebar'
 
 function Home() {
     return (
-        <h1>Home Page</h1>
+        <>
+        <Header/>
+        <Sidebar/>
+        <ListedCategories/>
+        </>
     )
 }
 
